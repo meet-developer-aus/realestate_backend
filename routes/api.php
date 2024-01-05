@@ -19,4 +19,11 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-Route::get('/menus', [MenuController::class, 'index']);
+    Route::get('/menus', [MenuController::class, 'index']);
+    Route::post('/menus', [MenuController::class, 'store']);
+
+    Route::delete('/menus/{id}', [MenuController::class, 'destroy']);
+
+    Route::get('/menus/{id}', [MenuController::class, 'show']);
+    Route::put('/menus/{id}', [MenuController::class, 'update']);
+    // Your routes here
